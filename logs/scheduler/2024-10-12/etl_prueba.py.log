@@ -15744,3 +15744,59 @@
 [2024-10-12T19:44:59.158+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:44:59.157+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-10-12T19:44:59.250+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:44:59.250+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
 [2024-10-12T19:44:59.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 2.070 seconds
+[2024-10-12T19:45:29.678+0000] {processor.py:161} INFO - Started process (PID=7004) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:45:29.691+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:45:29.695+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:45:29.694+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:45:31.128+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:45:31.180+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:45:31.180+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:45:31.228+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:45:31.228+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:45:31.276+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.630 seconds
+[2024-10-12T19:46:01.605+0000] {processor.py:161} INFO - Started process (PID=7017) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:01.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:46:01.611+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:01.610+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:02.811+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:02.863+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:02.862+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:46:02.913+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:02.912+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:46:02.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.400 seconds
+[2024-10-12T19:46:33.243+0000] {processor.py:161} INFO - Started process (PID=7030) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:33.257+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:46:33.261+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:33.260+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:34.405+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:46:34.477+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:34.476+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:46:34.540+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:46:34.539+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:46:34.636+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.407 seconds
+[2024-10-12T19:47:04.955+0000] {processor.py:161} INFO - Started process (PID=7042) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:04.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:47:04.960+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:04.959+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:06.185+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:06.290+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:06.290+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:47:06.382+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:06.382+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:47:06.437+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.498 seconds
+[2024-10-12T19:47:36.755+0000] {processor.py:161} INFO - Started process (PID=7053) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:36.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:47:36.763+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:36.762+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:38.733+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:47:38.827+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:38.823+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:47:38.895+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:47:38.895+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:47:38.950+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 2.210 seconds
+[2024-10-12T19:48:09.132+0000] {processor.py:161} INFO - Started process (PID=7064) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:09.148+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:48:09.152+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:09.151+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:10.431+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:10.493+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:10.492+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:48:10.540+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:10.540+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:48:10.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.491 seconds
+[2024-10-12T19:48:40.910+0000] {processor.py:161} INFO - Started process (PID=7076) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:40.912+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:48:40.916+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:40.915+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:41.996+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:48:42.058+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:42.057+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:48:42.115+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:48:42.114+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:48:42.180+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.289 seconds
+[2024-10-12T19:49:12.459+0000] {processor.py:161} INFO - Started process (PID=7088) to work on /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:49:12.473+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_prueba.py for tasks to queue
+[2024-10-12T19:49:12.476+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:49:12.475+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:49:13.694+0000] {processor.py:840} INFO - DAG(s) 'process_variables_financieras' retrieved from /opt/airflow/dags/etl_prueba.py
+[2024-10-12T19:49:13.750+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:49:13.749+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-12T19:49:13.830+0000] {logging_mixin.py:188} INFO - [2024-10-12T19:49:13.829+0000] {dag.py:3954} INFO - Setting next_dagrun for process_variables_financieras to 2024-10-12 00:00:00+00:00, run_after=2024-10-13 00:00:00+00:00
+[2024-10-12T19:49:13.896+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_prueba.py took 1.455 seconds
