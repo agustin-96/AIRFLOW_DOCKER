@@ -1,0 +1,46 @@
+[2024-09-26T23:20:28.300+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-26T23:20:28.955+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_api scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-26T23:20:29.256+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_api scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-26T23:20:29.312+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-09-26T23:20:34.281+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): read_data_from_api> on 2024-09-25 00:00:00+00:00
+[2024-09-26T23:20:34.317+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=94266) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-26T23:20:34.323+0000] {standard_task_runner.py:63} INFO - Started process 94284 to run task
+[2024-09-26T23:20:34.310+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_postgres_pandas_dag_with_decorators', 'read_data_from_api', 'scheduled__2024-09-25T00:00:00+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/etl_prueba.py', '--cfg-path', '/tmp/tmpujaygxka']
+[2024-09-26T23:20:34.326+0000] {standard_task_runner.py:91} INFO - Job 85: Subtask read_data_from_api
+[2024-09-26T23:20:34.584+0000] {task_command.py:426} INFO - Running <TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_api scheduled__2024-09-25T00:00:00+00:00 [running]> on host 5e909a8df6c4
+[2024-09-26T23:20:35.054+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_postgres_pandas_dag_with_decorators' AIRFLOW_CTX_TASK_ID='read_data_from_api' AIRFLOW_CTX_EXECUTION_DATE='2024-09-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-25T00:00:00+00:00'
+[2024-09-26T23:20:35.062+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-26T23:20:35.401+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1103 InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.bcra.gob.ar'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+[2024-09-26T23:20:35.451+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-26T23:20:35.453+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_prueba.py", line 48, in read_data_from_api
+    df.to_sql(TABLA, engine, schema=schema_name, if_exists='replace', index=False)
+                     ^^^^^^
+NameError: name 'engine' is not defined
+[2024-09-26T23:20:35.491+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=example_postgres_pandas_dag_with_decorators, task_id=read_data_from_api, run_id=scheduled__2024-09-25T00:00:00+00:00, execution_date=20240925T000000, start_date=20240926T232028, end_date=20240926T232035
+[2024-09-26T23:20:35.534+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 85 for task read_data_from_api (name 'engine' is not defined; 94284)
+[2024-09-26T23:20:35.562+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-26T23:20:35.628+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-26T23:20:35.638+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

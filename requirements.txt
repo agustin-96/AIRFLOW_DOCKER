@@ -1,0 +1,9 @@
+# requirements.txt
+
+# Paquetes necesarios para el DAG
+pandas
+psycopg2-binary
+requests
+
+# Proveedor de Postgres para Airflow
+apache-airflow-providers-postgres

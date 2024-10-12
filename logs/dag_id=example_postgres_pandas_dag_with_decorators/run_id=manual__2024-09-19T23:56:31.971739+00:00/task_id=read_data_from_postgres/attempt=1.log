@@ -1,0 +1,20 @@
+[2024-09-19T23:56:42.571+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-19T23:56:42.797+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_postgres manual__2024-09-19T23:56:31.971739+00:00 [queued]>
+[2024-09-19T23:56:42.902+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_postgres manual__2024-09-19T23:56:31.971739+00:00 [queued]>
+[2024-09-19T23:56:42.917+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-09-19T23:56:43.063+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): read_data_from_postgres> on 2024-09-19 23:56:31.971739+00:00
+[2024-09-19T23:56:43.186+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_postgres_pandas_dag_with_decorators', 'read_data_from_postgres', 'manual__2024-09-19T23:56:31.971739+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/etl_prueba.py', '--cfg-path', '/tmp/tmpda6rkaz8']
+[2024-09-19T23:56:43.217+0000] {standard_task_runner.py:91} INFO - Job 72: Subtask read_data_from_postgres
+[2024-09-19T23:56:43.228+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1315) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-19T23:56:43.229+0000] {standard_task_runner.py:63} INFO - Started process 1317 to run task
+[2024-09-19T23:56:43.550+0000] {task_command.py:426} INFO - Running <TaskInstance: example_postgres_pandas_dag_with_decorators.read_data_from_postgres manual__2024-09-19T23:56:31.971739+00:00 [running]> on host 5e909a8df6c4
+[2024-09-19T23:56:45.242+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_postgres_pandas_dag_with_decorators' AIRFLOW_CTX_TASK_ID='read_data_from_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-09-19T23:56:31.971739+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-19T23:56:31.971739+00:00'
+[2024-09-19T23:56:45.265+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-19T23:56:45.362+0000] {base.py:84} INFO - Using connection ID 'postgres' for task execution.
+[2024-09-19T23:56:45.511+0000] {logging_mixin.py:188} WARNING - /opt/***/dags/etl_prueba.py:49 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-19T23:56:45.581+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-19T23:56:45.596+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-19T23:56:45.652+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=example_postgres_pandas_dag_with_decorators, task_id=read_data_from_postgres, run_id=manual__2024-09-19T23:56:31.971739+00:00, execution_date=20240919T235631, start_date=20240919T235642, end_date=20240919T235645
+[2024-09-19T23:56:45.837+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-19T23:56:46.080+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-19T23:56:46.097+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
