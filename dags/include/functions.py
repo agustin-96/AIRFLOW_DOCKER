@@ -65,3 +65,24 @@ def ConsumoArchivo(nombre_archivo:str, nombre_tabla:str):
             )
         conn.commit()
 
+def ExportarDataTablaFinal(nombre_tabla:str):
+        query = f"""
+            INSERT INTO "BCRA".{nombre_tabla}
+            SELECT *
+            FROM (
+                SELECT  *
+                FROM "STG".{nombre_tabla}
+            ) t
+            ON CONFLICT ("fecha") DO UPDATE
+            SET
+              "valor" = excluded."valor";
+        """
+        try:
+            postgres_hook = PostgresHook(postgres_conn_id="postgres")
+            conn = postgres_hook.get_conn()
+            cur = conn.cursor()
+            cur.execute(query)
+            conn.commit()
+            return 0
+        except Exception as e:
+            return 1
