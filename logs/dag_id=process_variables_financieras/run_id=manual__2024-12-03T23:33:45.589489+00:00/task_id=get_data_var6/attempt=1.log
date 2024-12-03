@@ -1,0 +1,19 @@
+[2024-12-03T23:34:15.079+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-12-03T23:34:15.923+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_variables_financieras.get_data_var6 manual__2024-12-03T23:33:45.589489+00:00 [queued]>
+[2024-12-03T23:34:18.533+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_variables_financieras.get_data_var6 manual__2024-12-03T23:33:45.589489+00:00 [queued]>
+[2024-12-03T23:34:18.536+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-12-03T23:34:18.693+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): get_data_var6> on 2024-12-03 23:33:45.589489+00:00
+[2024-12-03T23:34:18.796+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'process_variables_financieras', 'get_data_var6', 'manual__2024-12-03T23:33:45.589489+00:00', '--job-id', '426', '--raw', '--subdir', 'DAGS_FOLDER/etl_prueba.py', '--cfg-path', '/tmp/tmpa0bz4yj7']
+[2024-12-03T23:34:18.811+0000] {standard_task_runner.py:91} INFO - Job 426: Subtask get_data_var6
+[2024-12-03T23:34:18.923+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1257) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-03T23:34:18.962+0000] {standard_task_runner.py:63} INFO - Started process 1279 to run task
+[2024-12-03T23:34:19.172+0000] {task_command.py:426} INFO - Running <TaskInstance: process_variables_financieras.get_data_var6 manual__2024-12-03T23:33:45.589489+00:00 [running]> on host 5e909a8df6c4
+[2024-12-03T23:34:20.725+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='process_variables_financieras' AIRFLOW_CTX_TASK_ID='get_data_var6' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T23:33:45.589489+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-03T23:33:45.589489+00:00'
+[2024-12-03T23:34:20.737+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-12-03T23:34:21.972+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1103 InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.bcra.gob.ar'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+[2024-12-03T23:34:22.089+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-12-03T23:34:22.098+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-12-03T23:34:22.162+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=process_variables_financieras, task_id=get_data_var6, run_id=manual__2024-12-03T23:33:45.589489+00:00, execution_date=20241203T233345, start_date=20241203T233415, end_date=20241203T233422
+[2024-12-03T23:34:22.362+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-12-03T23:34:22.535+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-03T23:34:22.560+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

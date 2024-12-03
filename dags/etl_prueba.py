@@ -85,8 +85,31 @@ def variables_financieras():
         ExportarDataTablaFinal("var5_cambio_mayorista_pesos")
 
 
+    """
+    ----------------------VARIABLE 6 TPM----------------------------
+    """
+    create_var6_tpm_table = PostgresOperator(
+        task_id="create_TPM_temp_table",
+        postgres_conn_id="postgres",
+        sql=CrearTablaTemporal('var6_tpm_na'),
+    )
+
+    @task
+    def get_data_var6():
+        ExtraerInfo('6','var6_tpm')
+
+    @task
+    def consumo_stg_var6():
+        ConsumoArchivo("var6_tpm","var6_tpm_na")
+
+    @task
+    def merge_data_var6():
+        ExportarDataTablaFinal("var6_tpm_na")
+
+
     create_var1_reservas_table >> get_data_var1() >> consumo_stg_var1() >> merge_data()
     create_var4_cambio_minorista_table >> get_data_var4() >> consumo_stg_var4() >> merge_data_var4()
     create_var5_cambio_mayorista_table >> get_data_var5() >> consumo_stg_var5() >> merge_data_var5()
+    create_var6_tpm_table >> get_data_var6() >> consumo_stg_var6() >> merge_data_var6()
 
 dag = variables_financieras()
