@@ -51,7 +51,7 @@ def CrearTablaTemporal(nombre:str)-> str:
     return sql
 
 
-def ConsumoArchivo(nombre_archivo:str, nombre_tabla:str):
+def ConsumoArchivo(nombre_archivo:str, nombre_tabla:str)-> None:
         postgres_hook = PostgresHook(postgres_conn_id="postgres")
         conn = postgres_hook.get_conn()
         cur = conn.cursor()
@@ -65,7 +65,7 @@ def ConsumoArchivo(nombre_archivo:str, nombre_tabla:str):
             )
         conn.commit()
 
-def ExportarDataTablaFinal(nombre_tabla:str):
+def ExportarDataTablaFinal(nombre_tabla:str)->None:
         query = f"""
             INSERT INTO "BCRA".{nombre_tabla}
             SELECT *

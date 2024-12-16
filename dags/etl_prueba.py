@@ -107,9 +107,31 @@ def variables_financieras():
         ExportarDataTablaFinal("var6_tpm_na")
 
 
+    """
+    ----------------------VARIABLE 7 BADLAR----------------------------
+    """
+    create_var7_badlar_table = PostgresOperator(
+        task_id="create_badlar_temp_table",
+        postgres_conn_id="postgres",
+        sql=CrearTablaTemporal('var7_badlar_na'),
+    )
+
+    @task
+    def get_data_var7():
+        ExtraerInfo('7','var7_badlar')
+
+    @task
+    def consumo_stg_var7():
+        ConsumoArchivo("var7_badlar","var7_badlar_na")
+
+    @task
+    def merge_data_var7():
+        ExportarDataTablaFinal("var7_badlar_na")
+
     create_var1_reservas_table >> get_data_var1() >> consumo_stg_var1() >> merge_data()
     create_var4_cambio_minorista_table >> get_data_var4() >> consumo_stg_var4() >> merge_data_var4()
     create_var5_cambio_mayorista_table >> get_data_var5() >> consumo_stg_var5() >> merge_data_var5()
     create_var6_tpm_table >> get_data_var6() >> consumo_stg_var6() >> merge_data_var6()
+    create_var7_badlar_table >> get_data_var7() >> consumo_stg_var7() >> merge_data_var7()
 
 dag = variables_financieras()
